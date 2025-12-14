@@ -1,0 +1,126 @@
+0 verbose cli /data/data/com.termux/files/usr/bin/node /data/data/com.termux/files/usr/bin/npm
+1 info using npm@11.6.2
+2 info using node@v24.11.1
+3 silly config load:file:/data/data/com.termux/files/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/data/data/com.termux/files/home/ai-validasi-ide/backend/.npmrc
+5 silly config load:file:/data/data/com.termux/files/home/.npmrc
+6 silly config load:file:/data/data/com.termux/files/usr/etc/npmrc
+7 verbose title npm install openai dotenv cors
+8 verbose argv "install" "openai" "dotenv" "cors"
+9 verbose logfile logs-max:10 dir:/data/data/com.termux/files/home/.npm/_logs/2025-12-13T07_09_17_263Z-
+10 verbose logfile /data/data/com.termux/files/home/.npm/_logs/2025-12-13T07_09_17_263Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly packumentCache heap:1174405120 maxSize:293601280 maxEntrySize:146800640
+13 silly logfile done cleaning log files
+14 silly idealTree buildDeps
+15 silly fetch manifest cors@^2.8.5
+16 silly packumentCache full:https://registry.npmjs.org/cors cache-miss
+17 http cache https://registry.npmjs.org/cors 31ms (cache hit)
+18 silly packumentCache full:https://registry.npmjs.org/cors set size:73833 disposed:false
+19 silly fetch manifest dotenv@^17.2.3
+20 silly packumentCache full:https://registry.npmjs.org/dotenv cache-miss
+21 http cache https://registry.npmjs.org/dotenv 12ms (cache hit)
+22 silly packumentCache full:https://registry.npmjs.org/dotenv set size:261324 disposed:false
+23 silly fetch manifest openai@^6.10.0
+24 silly packumentCache full:https://registry.npmjs.org/openai cache-miss
+25 http cache https://registry.npmjs.org/openai 19ms (cache hit)
+26 silly packumentCache full:https://registry.npmjs.org/openai set size:4530402 disposed:false
+27 silly fetch manifest ws@^8.18.0
+28 silly packumentCache full:https://registry.npmjs.org/ws cache-miss
+29 http cache https://registry.npmjs.org/ws 10ms (cache hit)
+30 silly packumentCache full:https://registry.npmjs.org/ws set size:410885 disposed:false
+31 silly fetch manifest bufferutil@^4.0.1
+32 silly packumentCache full:https://registry.npmjs.org/bufferutil cache-miss
+33 http cache https://registry.npmjs.org/bufferutil 16ms (cache hit)
+34 silly packumentCache full:https://registry.npmjs.org/bufferutil set size:51033 disposed:false
+35 silly fetch manifest utf-8-validate@>=5.0.2
+36 silly packumentCache full:https://registry.npmjs.org/utf-8-validate cache-miss
+37 http cache https://registry.npmjs.org/utf-8-validate 5ms (cache hit)
+38 silly packumentCache full:https://registry.npmjs.org/utf-8-validate set size:75205 disposed:false
+39 silly fetch manifest zod@^3.25 || ^4.0
+40 silly packumentCache full:https://registry.npmjs.org/zod cache-miss
+41 http cache https://registry.npmjs.org/zod 16ms (cache hit)
+42 silly packumentCache full:https://registry.npmjs.org/zod set size:3262273 disposed:false
+43 silly placeDep ROOT cors@2.8.5 REPLACE for: backend@1.0.0 want: ^2.8.5
+44 silly placeDep ROOT dotenv@17.2.3 REPLACE for: backend@1.0.0 want: ^17.2.3
+45 silly placeDep ROOT openai@6.10.0 REPLACE for: backend@1.0.0 want: ^6.10.0
+46 silly reify moves {}
+47 silly audit bulk request {
+47 silly audit   accepts: [ '2.0.0' ],
+47 silly audit   'body-parser': [ '2.2.1' ],
+47 silly audit   bytes: [ '3.1.2' ],
+47 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+47 silly audit   'call-bound': [ '1.0.4' ],
+47 silly audit   'content-disposition': [ '1.0.1' ],
+47 silly audit   'content-type': [ '1.0.5' ],
+47 silly audit   cookie: [ '0.7.2' ],
+47 silly audit   'cookie-signature': [ '1.2.2' ],
+47 silly audit   debug: [ '4.4.3' ],
+47 silly audit   depd: [ '2.0.0' ],
+47 silly audit   'dunder-proto': [ '1.0.1' ],
+47 silly audit   'ee-first': [ '1.1.1' ],
+47 silly audit   encodeurl: [ '2.0.0' ],
+47 silly audit   'es-define-property': [ '1.0.1' ],
+47 silly audit   'es-errors': [ '1.3.0' ],
+47 silly audit   'es-object-atoms': [ '1.1.1' ],
+47 silly audit   'escape-html': [ '1.0.3' ],
+47 silly audit   etag: [ '1.8.1' ],
+47 silly audit   express: [ '5.2.1' ],
+47 silly audit   finalhandler: [ '2.1.1' ],
+47 silly audit   forwarded: [ '0.2.0' ],
+47 silly audit   fresh: [ '2.0.0' ],
+47 silly audit   'function-bind': [ '1.1.2' ],
+47 silly audit   'get-intrinsic': [ '1.3.0' ],
+47 silly audit   'get-proto': [ '1.0.1' ],
+47 silly audit   gopd: [ '1.2.0' ],
+47 silly audit   'has-symbols': [ '1.1.0' ],
+47 silly audit   hasown: [ '2.0.2' ],
+47 silly audit   'http-errors': [ '2.0.1' ],
+47 silly audit   'iconv-lite': [ '0.7.1' ],
+47 silly audit   inherits: [ '2.0.4' ],
+47 silly audit   'ipaddr.js': [ '1.9.1' ],
+47 silly audit   'is-promise': [ '4.0.0' ],
+47 silly audit   'math-intrinsics': [ '1.1.0' ],
+47 silly audit   'media-typer': [ '1.1.0' ],
+47 silly audit   'merge-descriptors': [ '2.0.0' ],
+47 silly audit   'mime-db': [ '1.54.0' ],
+47 silly audit   'mime-types': [ '3.0.2' ],
+47 silly audit   ms: [ '2.1.3' ],
+47 silly audit   negotiator: [ '1.0.0' ],
+47 silly audit   'object-assign': [ '4.1.1' ],
+47 silly audit   'object-inspect': [ '1.13.4' ],
+47 silly audit   'on-finished': [ '2.4.1' ],
+47 silly audit   once: [ '1.4.0' ],
+47 silly audit   parseurl: [ '1.3.3' ],
+47 silly audit   'path-to-regexp': [ '8.3.0' ],
+47 silly audit   'proxy-addr': [ '2.0.7' ],
+47 silly audit   qs: [ '6.14.0' ],
+47 silly audit   'range-parser': [ '1.2.1' ],
+47 silly audit   'raw-body': [ '3.0.2' ],
+47 silly audit   router: [ '2.2.0' ],
+47 silly audit   'safer-buffer': [ '2.1.2' ],
+47 silly audit   send: [ '1.2.0' ],
+47 silly audit   'serve-static': [ '2.2.0' ],
+47 silly audit   setprototypeof: [ '1.2.0' ],
+47 silly audit   'side-channel': [ '1.1.0' ],
+47 silly audit   'side-channel-list': [ '1.0.0' ],
+47 silly audit   'side-channel-map': [ '1.0.1' ],
+47 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+47 silly audit   statuses: [ '2.0.2' ],
+47 silly audit   toidentifier: [ '1.0.1' ],
+47 silly audit   'type-is': [ '2.0.1' ],
+47 silly audit   unpipe: [ '1.0.0' ],
+47 silly audit   vary: [ '1.1.2' ],
+47 silly audit   wrappy: [ '1.0.2' ],
+47 silly audit   cors: [ '2.8.5' ],
+47 silly audit   dotenv: [ '17.2.3' ],
+47 silly audit   openai: [ '6.10.0' ]
+47 silly audit }
+48 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 1079ms
+49 silly audit report {}
+50 verbose cwd /data/data/com.termux/files/home/ai-validasi-ide/backend
+51 verbose os Linux 6.1.99-android14-11-30958380-abS928BXXS4BYEB
+52 verbose node v24.11.1
+53 verbose npm  v11.6.2
+54 verbose exit 0
+55 info ok
