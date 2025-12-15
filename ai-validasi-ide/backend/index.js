@@ -5,22 +5,36 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const PORT = process.env.PORT || 3001;
+app.get("/", (req, res) => {
+  res.json({
+    status: "OK",
+    message: "Backend AI Validasi Ide is running 🚀"
+  });
+});
 
+// ✅ ROUTE ROOT (WAJIB)
 app.get("/", (req, res) => {
   res.json({ status: "Backend is running 🚀" });
 });
 
+// ✅ ROUTE API
 app.post("/validate-idea", (req, res) => {
   const { idea } = req.body;
 
+  if (!idea) {
+    return res.status(400).json({ error: "Idea is required" });
+  }
+
   res.json({
-    success: true,
     idea,
-    result: "Ide ini valid untuk diuji lebih lanjut (dummy response)"
+    score: 75,
+    verdict: "Potensial",
+    notes: "Ini masih mock response"
   });
 });
 
+// ✅ PORT WAJIB UNTUK RENDER
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
-  console.log(`Backend running on port ${PORT}`);
+  console.log("Server running on port", PORT);
 });
