@@ -5,13 +5,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.json({
-    status: "OK",
-    message: "Backend AI Validasi Ide is running 🚀"
-  });
-});
-
 // ✅ ROUTE ROOT (WAJIB)
 app.get("/", (req, res) => {
   res.json({ status: "Backend is running 🚀" });
