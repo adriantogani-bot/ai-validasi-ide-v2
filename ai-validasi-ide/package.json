@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "ai-validasi-ide-backend",
   "version": "1.0.0",
   "main": "index.js",
   "type": "commonjs",
@@ -7,7 +7,7 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^5.0.0"
+    "express": "^4.19.2",
+    "cors": "^2.8.5"
   }
 }
