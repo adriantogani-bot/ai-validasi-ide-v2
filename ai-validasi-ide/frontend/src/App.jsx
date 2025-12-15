@@ -14,7 +14,7 @@ function App() {
     setResult("⏳ Mengirim ide ke backend...");
     
     try {
-      const res = await fetch("https://ai-validasi-ide.onrender.com/validate-idea", {
+      const res = await fetch("https://ai-validasi-ide-backend.onrender.com/validate-idea", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
