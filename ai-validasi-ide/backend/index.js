@@ -5,12 +5,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// ✅ ROUTE ROOT (WAJIB)
+// ROOT CHECK
 app.get("/", (req, res) => {
   res.json({ status: "Backend is running 🚀" });
 });
 
-// ✅ ROUTE API
+// API
 app.post("/validate-idea", (req, res) => {
   const { idea } = req.body;
 
@@ -26,7 +26,7 @@ app.post("/validate-idea", (req, res) => {
   });
 });
 
-// ✅ PORT WAJIB UNTUK RENDER
+// WAJIB UNTUK RENDER
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log("Server running on port", PORT);
