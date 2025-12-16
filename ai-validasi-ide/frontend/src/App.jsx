@@ -4,10 +4,11 @@ export default function App() {
   const [idea, setIdea] = useState("");
   const [result, setResult] = useState("");
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const analyzeIdea = async () => {
-    if (!idea.trim()) return;
     setLoading(true);
+    setError("");
     setResult("");
 
     try {
@@ -23,61 +24,69 @@ export default function App() {
       const data = await res.json();
       setResult(data.result);
     } catch (err) {
-      setResult("❌ Gagal menghubungi backend");
-    } finally {
-      setLoading(false);
+      setError("❌ Gagal menghubungi server AI");
     }
+
+    setLoading(false);
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-zinc-900 to-black text-white px-4 py-10">
-      <div className="max-w-3xl mx-auto space-y-10">
-
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-black text-white px-4 py-10">
+      <div className="max-w-3xl mx-auto space-y-8">
         {/* Header */}
-        <header className="space-y-3">
-          <h1 className="text-3xl md:text-5xl font-bold">
+        <div className="text-center space-y-3">
+          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
             AI Validasi Ide Bisnis
           </h1>
-          <p className="text-zinc-400 text-sm md:text-base">
-            Analisis cepat kelayakan ide bisnis Anda menggunakan AI
+          <p className="text-gray-400 text-lg">
+            Analisis cepat kelayakan ide bisnis menggunakan AI
           </p>
-        </header>
+        </div>
 
         {/* Input Card */}
-        <section className="bg-zinc-900 border border-zinc-800 rounded-xl p-5 space-y-4">
-          <label className="text-sm text-zinc-400">
+        <div className="bg-gray-900 border border-gray-800 rounded-xl p-6 space-y-4 shadow-lg">
+          <label className="block text-sm font-semibold text-gray-300">
             Deskripsikan ide bisnis Anda
           </label>
 
           <textarea
+            rows="4"
             value={idea}
             onChange={(e) => setIdea(e.target.value)}
-            rows={4}
-            placeholder="Contoh: Menjual skin care murah di bazaar Gen Z"
-            className="w-full bg-black border border-zinc-700 rounded-lg p-3 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            placeholder="Contoh: Menjual skincare murah untuk Gen Z di bazaar kampus"
+            className="w-full rounded-lg bg-gray-800 border border-gray-700 p-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
 
           <button
             onClick={analyzeIdea}
-            disabled={loading}
-            className="bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 px-5 py-2 rounded-lg text-sm font-semibold"
+            disabled={loading || !idea}
+            className="w-full bg-indigo-600 hover:bg-indigo-700 disabled:bg-gray-600 transition font-semibold py-3 rounded-lg"
           >
             {loading ? "Menganalisis..." : "Analisis Ide"}
           </button>
-        </section>
+
+          {error && (
+            <p className="text-red-400 text-sm text-center">{error}</p>
+          )}
+        </div>
 
         {/* Result */}
         {result && (
-          <section className="bg-zinc-900 border border-zinc-800 rounded-xl p-5 space-y-3">
-            <h2 className="text-lg font-semibold flex items-center gap-2">
+          <div className="bg-gray-900 border border-gray-800 rounded-xl p-6 space-y-4 shadow-lg">
+            <h2 className="text-2xl font-bold flex items-center gap-2">
               📊 Hasil Analisis AI
             </h2>
 
-            <div className="text-sm text-zinc-200 whitespace-pre-line leading-relaxed max-h-[400px] overflow-y-auto">
+            <div className="prose prose-invert max-w-none text-gray-200 whitespace-pre-line">
               {result}
             </div>
-          </section>
+          </div>
         )}
+
+        {/* Footer */}
+        <div className="text-center text-gray-500 text-sm">
+          © {new Date().getFullYear()} AI Validasi Ide · Powered by OpenAI
+        </div>
       </div>
     </div>
   );
